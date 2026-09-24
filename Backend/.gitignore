@@ -1,0 +1,42 @@
+# ---------------------------------------------------------------------
+# uv & Python specific
+# ---------------------------------------------------------------------
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*\$py.class
+
+# Local virtual environments
+# (uv creates a `.venv` directory, but automatically hides an internal 
+# .gitignore inside it. Explicitly adding it here is still best practice).
+.venv/
+
+# uv cache directory (if configured to be local)
+.uv/
+
+# ---------------------------------------------------------------------
+# Lockfiles & Versions (Strategic Choices)
+# ---------------------------------------------------------------------
+
+# For projects/applications: DO NOT ignore uv.lock (commit it for reproducible builds).
+# For libraries intended to be published to PyPI: You may uncomment the line below.
+# uv.lock
+
+# If you prefer to lock your specific Python version locally and not share it
+# .python-version
+
+# ---------------------------------------------------------------------
+# Environment Variables & Secrets
+# ---------------------------------------------------------------------
+.env
+.env.[a-zA-Z]*
+!.env.example
+
+# ---------------------------------------------------------------------
+# Testing & Testing Tools
+# ---------------------------------------------------------------------
+.pytest_cache/
+.htmlcov/
+htmlcov/
+.coverage
