@@ -8,6 +8,7 @@ from pydantic import BaseModel
 import json
 import ast
 from fastapi import HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 
 
 load_dotenv()
@@ -35,6 +36,7 @@ def ask_candidate(question: str, parsedResume):
     3. If information is unavailable, say "I don't have enough information to answer that."
     4. Be professional.
     5. Answer as if HR is interviewing this candidate.
+    6. Give the answer strictly in paragraphs.
     """
     messages=[
         {
@@ -51,6 +53,14 @@ def ask_candidate(question: str, parsedResume):
     return response.choices[0].message.content
 
 app = FastAPI()
+frontend = os.getenv("FRONTEND")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", frontend],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/api/ask")
 def askQuestions(request: ChatRequest):
