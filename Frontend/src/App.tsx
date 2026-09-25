@@ -6,6 +6,9 @@ import { Skills } from "./components/Skills";
 import { AskAI } from "./components/AskAI";
 import { Footer } from "./components/Footer";
 import { FloatingDock } from "./components/FloatingDock";
+import ReactGA from 'react-ga4';
+
+ReactGA.initialize(import.meta.env.VITE_GA_MEASUREMENT_ID); 
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -17,6 +20,13 @@ function App() {
       setActiveSection(id);
     }
   };
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname + window.location.search,
+    });
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
