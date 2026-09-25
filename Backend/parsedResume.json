@@ -1,3 +1,102 @@
 {
-  "name": "tr"
+  "name": "Mohd Abdul Wasay Talha",
+  "email": "mawtalha5112004@gmail.com",
+  "phone": "+91 81259 53062",
+  "totalExp": 0,
+  "skills": [
+    "JavaScript",
+    "Python",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Express.js",
+    "TypeScript",
+    "Bun",
+    "MongoDB",
+    "PostgreSQL",
+    "pgvector",
+    "WebSocket",
+    "Redis",
+    "BullMQ",
+    "Git",
+    "Linux",
+    "GitHub Actions",
+    "Docker",
+    "Kubernetes",
+    "AWS",
+    "AWS Lambda"
+  ],
+  "experiences": null,
+  "certifications": [
+    {
+      "title": "AWS Certification",
+      "description": "Gained practical knowledge in cloud architecture fundamentals, setting up infrastructure, utilizing key AWS services (such as EC2, S3, and IAM).",
+      "link": null
+    }
+  ],
+  "projects": [
+    {
+      "title": "TradeX",
+      "toolsTechUsed": [
+        "Bun",
+        "TypeScript",
+        "Redis Streams",
+        "PostgreSQL",
+        "WebSockets",
+        "Express"
+      ],
+      "liveLink": null,
+      "githubLink": "https://github.com/Talha9509/TradeX",
+      "description": [
+        "Architected a highly concurrent spot trading exchange using Redis Streams to decouple distributed services including the backend, matching engine, WebSocket server, WebSocket client, and background workers, enabling asynchronous communication and scalable order processing.",
+        "Engineered an in-memory matching engine supporting order execution, partial fills, achieving a 90ms p95 latency.",
+        "Implemented a zero-data-loss disaster recovery system based on Event Sourcing, combining automated Redis RDB snapshots (backed up to AWS S3) with deterministic stream replay to restore volatile engine state after crashes.",
+        "Developed a real-time market data WebSocket server that consumes asynchronous engine events to fan out orderbook depth updates to subscribers with minimal latency.",
+        "Ensured durable, eventually consistent financial record-keeping by sinking executed trades into PostgreSQL via a dedicated Prisma consumer worker."
+      ]
+    },
+    {
+      "title": "Build My Idea",
+      "toolsTechUsed": [
+        "Express",
+        "PostgreSQL",
+        "Docker",
+        "Redis",
+        "BullMQ",
+        "pgvector",
+        "WebSockets"
+      ],
+      "liveLink": "https://buildmyidea.duckdns.org",
+      "githubLink": null,
+      "description": [
+        "Engineered a full-stack monorepo platform with seamless collaboration and team formation between early-stage startups and developers through scalable backend services and real-time communication.",
+        "Launched instant push notifications via Redis Pub/Sub, broadcasting critical platform alerts.",
+        "Improved transaction throughput by 30% by eliminating N+1 queries and integrating bulk inserts for payment processing and automated Razorpay payouts.",
+        "Built a background worker to generate embeddings for projects, powering pgvector-based semantic search that matches projects by skill relevance rather than keywords. Offloading generation from the request path to keep the API responsive and increased the matched outputs by 25%."
+      ]
+    },
+    {
+      "title": "Better Up Time - Monitoring Platform",
+      "toolsTechUsed": [
+        "TypeScript",
+        "Express.js",
+        "Redis",
+        "AWS Lambda"
+      ],
+      "liveLink": "https://betteruptime.duckdns.org",
+      "githubLink": null,
+      "description": [
+        "Developed a full-stack uptime monitoring platform performing continuous website health checks, deliveringreal-time status dashboards and historical performance tracking that reduced critical incidents by 20%.",
+        "Designed a fault-tolerant monitoring architecture with a multi-region Redis-backed job queue to coordinate globally distributed monitoring workers, enabling reliable asynchronous task scheduling, failure handling, and low-latency response-time collection.",
+        "Deployed serverless monitoring workers on AWS Lambda to process asynchronous checks, reducing end-to-end system latency by 35% and maximizing polling throughput."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "BuildMyIdea - Founder & Developer",
+      "description": "Independently designed, built, and publicly launched BuildMyIdea, a startup–developer marketplace with live payment/escrow infrastructure, iterated the product twice based on direct user feedback and grew itto real, organically acquired users without funding, a team, or marketing spend.",
+      "link": "https://www.producthunt.com/products/build-my-idea"
+    }
+  ]
 }
