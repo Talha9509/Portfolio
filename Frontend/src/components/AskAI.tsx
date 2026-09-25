@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { portfolioData } from "../data/portfolioData";
 
 interface ChatMessage {
@@ -31,9 +31,9 @@ export const AskAI: React.FC = () => {
     "What is his experience with AI and Full Stack?",
   ];
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  // const scrollToBottom = () => {
+  //   messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  // };
 
   // useEffect(() => {
     // scrollToBottom();
